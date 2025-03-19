@@ -2,6 +2,11 @@ import express from "express";
 import dotenv from "dotenv"
 import cors from "cors"
 import db from "./utils/db.js"; // sometimes you have to mention the extension 
+//import all routes
+import userRoutes from "./routes/user.routes.js"
+
+
+
 dotenv.config() // if you have your env is in root, if it's not then give path inside config
 
 const app = express()
@@ -29,6 +34,10 @@ app.get("/harsh", (req, res) => {
 
 // connect to db
 db();
+
+// user routes
+app.use("/api/v1/users/", userRoutes)
+
 
 // listening to port 3000
 app.listen(port, () => {
