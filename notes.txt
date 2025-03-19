@@ -1,0 +1,42 @@
+FullStack App Speedrun
+
+npm init
+node install express
+create index.js file
+create .env file
+
+use import as its modern practice
+
+
+## we have 65535 ports in computer few common ports are 4000, 808, 5000
+use can use any
+
+type of request are GET, POST, PUT, DELTE
+
+web server is an infinite loop
+it keeps on running i.e. listen 
+
+sending get request is easy --> 127.0.0.1:3000 or locahost:3000 then use slash / to send the type of request 
+
+
+to keep monitoring the changes we use node monitor (nodemon)
+use npm i nodemon to install node monitor
+
+point to remember--
+we have two type of dependencies one is for production and one is for development
+that we don't use in production, so basically nodemon is type of development dependency 
+use -D to intall package in development dependency
+
+
+change the script in package.json to let the nodemon know which file needs to be monitored
+ex:  "scripts": {
+    "start": "nodemon index.js",
+    } 
+    or you can do it in diff way as well ie.
+
+    "scripts": {
+    "dev": "nodemon index.js",
+    } 
+
+Routes will always start from / , you cannot write like this app.get(harsh)
+always write app.get("/harsh", (res, req))
