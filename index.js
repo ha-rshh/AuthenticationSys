@@ -36,7 +36,7 @@ app.get("/harsh", (req, res) => {
 db();
 
 // user routes
-app.use("/api/v1/users/", userRoutes)
+app.use("/api/v1/users", userRoutes)
 
 
 // listening to port 3000
